@@ -1,0 +1,40 @@
+{
+  "name": "app-one",
+  "productName": "App One",
+  "author": "My Company <support@my-company.com>",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "release": "build"
+  },
+  "build": {
+    "appId": "com.my-company.app-one",
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "ia32",
+            "x64"
+          ]
+        }
+      ]
+    },
+    "nsis": {
+      "guid": "2217D4F9-F630-453C-A8EE-29ED7C288840",
+      "oneClick": false,
+      "perMachine": true,
+      "allowToChangeInstallationDirectory": true,
+      "menuCategory": true
+    }
+  },
+  "dependencies": {
+    "electron-boilerplate": "^1.0.8"
+  },
+  "devDependencies": {
+    "electron": "^1.7.10",
+    "electron-builder": "^19.49.0"
+  }
+}
